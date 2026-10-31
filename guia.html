@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+<meta property="og:image" content="https://nilsonbernal.com/.netlify/og-image/e7b82d2784a28f2ecb909811903d90a5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como saber se seu hotel está sendo mal gerido — Nilson Bernal</title>
+  <meta name="description" content="Guia prático para proprietários de hotéis independentes. 7 sinais de má gestão, checklist de visita surpresa e critérios objetivos para trocar de gestor.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --verde: #162E28;
+      --dourado: #9D6E26;
+      --creme: #F5F0E8;
+      --texto: #1a1a1a;
+      --texto-suave: #555;
+    }
+
+    body {
+      background: var(--creme);
+      color: var(--texto);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--verde);
+      color: #fff;
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: #fff;
+    }
+
+    .hero h1 span {
+      color: var(--dourado);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--dourado);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 40px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #b8832e;
+      transform: translateY(-1px);
+    }
+
+    .hero-price {
+      margin-top: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--dourado);
+      margin: 0 auto 32px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 72px 24px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: var(--verde);
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.3;
+    }
+
+    /* ITENS */
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .item-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--verde);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--dourado);
+    }
+
+    .item-text strong {
+      display: block;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--verde);
+      margin-bottom: 4px;
+    }
+
+    .item-text p {
+      font-size: 14px;
+      color: var(--texto-suave);
+    }
+
+    /* DARK SECTION */
+    .section-dark {
+      background: var(--verde);
+      padding: 72px 24px;
+    }
+
+    .section-dark .inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .section-dark .section-label {
+      color: var(--dourado);
+    }
+
+    .section-dark h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.3;
+    }
+
+    .sinais {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .sinal {
+      border: 1px solid rgba(157,110,38,0.4);
+      padding: 24px;
+    }
+
+    .sinal-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--dourado);
+      margin-bottom: 8px;
+    }
+
+    .sinal p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    /* AUTOR */
+    .autor {
+      background: #fff;
+      padding: 72px 24px;
+    }
+
+    .autor .inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .autor-nome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--verde);
+      margin-bottom: 4px;
+    }
+
+    .autor-titulo {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 24px;
+    }
+
+    .autor p {
+      font-size: 14px;
+      color: var(--texto-suave);
+      line-height: 1.8;
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      background: var(--dourado);
+      padding: 72px 24px;
+      text-align: center;
+    }
+
+    .cta-final h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .cta-final p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      max-width: 480px;
+      margin: 0 auto 36px;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: var(--verde);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 40px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-secondary:hover {
+      background: #0d1e1a;
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--verde);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 600px) {
+      .sinais { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Nilson Bernal · Global CEO USA · ELEVHOTELS</p>
+    <h1>Como saber se seu hotel<br>está sendo <span>mal gerido</span></h1>
+    <p class="hero-sub">O guia do proprietário que não mora no hotel. 30 anos de operação destilados em uma ferramenta que você aplica sozinho.</p>
+    <a href="https://nilsonbernal.gumroad.com/l/foleq" target="_blank" class="btn-primary">Quero o guia agora</a>
+    <p class="hero-price">Disponível por $9</p>
+  </section>
+
+  <!-- O QUE VOCÊ VAI ENCONTRAR -->
+  <section class="section">
+    <p class="section-label">O que está no guia</p>
+    <h2>Três ferramentas que o mercado<br>nunca te deu</h2>
+    <div class="items">
+      <div class="item">
+        <div class="item-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
+        <div class="item-text">
+          <strong>Checklist de visita surpresa</strong>
+          <p>Duas horas. Você chega sem avisar e sabe exatamente o que observar, em qual ordem, em qual área. Sem improviso. Mais de 30 pontos de verificação estruturados.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-3 3v-3z"/></svg>
+        </div>
+        <div class="item-text">
+          <strong>As 7 perguntas semanais por WhatsApp</strong>
+          <p>Toda segunda-feira. Em 3 meses você tem um padrão de resposta que diz tudo sobre seu gestor. Respostas vagas ou atrasadas já são uma informação.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <div class="item-text">
+          <strong>Critérios objetivos para trocar de gestor</strong>
+          <p>Não pela emoção. Por 3 níveis de alerta com critérios claros. Você decide com dado, não com desconforto. Inclui o que documentar antes de qualquer rescisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 SINAIS -->
+  <section class="section-dark">
+    <div class="inner">
+      <p class="section-label">Capítulo 2</p>
+      <h2>Os 7 sinais de que seu hotel<br>está sendo mal gerido</h2>
+      <div class="sinais">
+        <div class="sinal"><p class="sinal-num">01</p><p>As avaliações online caem lentamente, de forma quase imperceptível</p></div>
+        <div class="sinal"><p class="sinal-num">02</p><p>Alta rotatividade de colaboradores sem explicação ou ação corretiva</p></div>
+        <div class="sinal"><p class="sinal-num">03</p><p>O patrimônio se deteriora sem que ninguém apresente um plano</p></div>
+        <div class="sinal"><p class="sinal-num">04</p><p>Você não consegue respostas simples e diretas do seu gestor</p></div>
+        <div class="sinal"><p class="sinal-num">05</p><p>A receita é sempre explicada pelo mercado, nunca pela gestão</p></div>
+        <div class="sinal"><p class="sinal-num">06</p><p>As OTAs representam mais de 60% das reservas e crescem todo mês</p></div>
+        <div class="sinal"><p class="sinal-num">07</p><p>Você sente que algo está errado, mas não consegue nomear o quê</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOR -->
+  <section class="autor">
+    <div class="inner">
+      <div class="divider"></div>
+      <p class="autor-nome">Nilson Bernal</p>
+      <p class="autor-titulo">Global CEO USA · ELEVHOTELS</p>
+      <p>30 anos de carreira em hotelaria de alto padrão no Brasil e nos Estados Unidos. Operação de marcas como Ritz-Carlton, Four Seasons, W Hotels, Sheraton, Radisson e Four Points. Autor de <em>Para uma Trajetória de Sucesso na Hotelaria</em> e coautor de oito títulos, incluindo lançamento no Louvre, em Paris.</p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>O dono que sabe o que está<br>acontecendo não é surpreendido.</h2>
+    <p>Guia prático. Aplicável sozinho. Sem necessidade de consultoria para começar.</p>
+    <a href="https://nilsonbernal.gumroad.com/l/foleq" target="_blank" class="btn-secondary">Acessar o guia agora</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>NILSON BERNAL · GLOBAL CEO USA · ELEVHOTELS · nilsonbernal.com</p>
+  </footer>
+
+</body>
+</html>
