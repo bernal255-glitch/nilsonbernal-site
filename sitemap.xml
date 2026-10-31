@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nilsonbernal.com/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nilsonbernal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nilsonbernal.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/"/>
+  </url>
+  <url>
+    <loc>https://nilsonbernal.com/en/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nilsonbernal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nilsonbernal.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/"/>
+  </url>
+  <url>
+    <loc>https://nilsonbernal.com/es/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nilsonbernal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nilsonbernal.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/"/>
+  </url>
+  <url>
+    <loc>https://nilsonbernal.com/guia.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nilsonbernal.com/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nilsonbernal.com/guia-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/guia.html"/>
+  </url>
+  <url>
+    <loc>https://nilsonbernal.com/guide.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nilsonbernal.com/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nilsonbernal.com/guia-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/guia.html"/>
+  </url>
+  <url>
+    <loc>https://nilsonbernal.com/guia-es.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nilsonbernal.com/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nilsonbernal.com/guia-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/guia.html"/>
+  </url>
+</urlset>
