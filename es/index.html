@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta property="og:image" content="https://nilsonbernal.com/.netlify/og-image/e7b82d2784a28f2ecb909811903d90a5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nilson Bernal | Inteligencia para hoteles independientes</title>
+<meta name="description" content="Más de 30 años en hotelería de alto estándar en Brasil y EE.UU. Haz el Hotel Intelligence Scan gratuito y descubre el score de tu hotel en 6 dimensiones."/>
+<link rel="canonical" href="https://nilsonbernal.com/es/"/>
+<link rel="alternate" hreflang="pt-BR" href="https://nilsonbernal.com/"/>
+<link rel="alternate" hreflang="en" href="https://nilsonbernal.com/en/"/>
+<link rel="alternate" hreflang="es" href="https://nilsonbernal.com/es/"/>
+<link rel="alternate" hreflang="x-default" href="https://nilsonbernal.com/"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--verde:#0e2a1f;
+--verde2:#1a4a3a;
+--dourado:#b8924a;
+--dourado2:#9d7a3a;
+--creme:#f5f0e8;
+--creme2:#ede5d5;
+--branco:#ffffff;
+--texto:#1a1a1a;
+--texto2:#4a4a4a;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--verde);color:var(--branco);line-height:1.7;overflow-x:hidden}
+
+/* LANG SWITCHER */
+.lang-bar{background:rgba(0,0,0,0.4);padding:8px 40px;display:flex;justify-content:flex-end;gap:16px;font-size:11px;letter-spacing:0.12em}
+.lang-btn{color:rgba(255,255,255,0.5);cursor:pointer;text-transform:uppercase;font-weight:600;transition:color 0.2s;background:none;border:none;font-family:'Montserrat',sans-serif}
+.lang-btn.active,.lang-btn:hover{color:var(--dourado)}
+
+/* NAV */
+nav{background:rgba(14,42,31,0.97);padding:20px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(184,146,74,0.2)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--branco);text-decoration:none;letter-spacing:0.05em}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--dourado)}
+.nav-cta{background:var(--dourado)!important;color:var(--verde)!important;padding:10px 20px!important}
+.nav-cta:hover{background:var(--dourado2)!important}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px 40px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a1f16 0%,#0e2a1f 40%,#142e22 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(184,146,74,0.08) 0%,transparent 60%);pointer-events:none}
+.hero-content{max-width:760px;position:relative;z-index:2}
+.hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--dourado);margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,80px);font-weight:900;line-height:1.05;color:var(--branco);margin-bottom:32px}
+.hero h1 em{font-style:italic;color:var(--dourado)}
+.hero-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,0.7);max-width:520px;margin-bottom:48px;line-height:1.8}
+.hero-divider{width:80px;height:2px;background:var(--dourado);margin-bottom:48px}
+.hero-stats{display:flex;gap:48px;margin-bottom:48px}
+.stat-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--dourado);line-height:1}
+.stat-label{font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px}
+.btn-primary{display:inline-block;background:var(--dourado);color:var(--verde);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none}
+.btn-primary:hover{background:var(--dourado2);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);font-size:12px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:15px 40px;text-decoration:none;transition:all 0.2s;margin-left:16px}
+.btn-outline:hover{border-color:var(--dourado);color:var(--dourado)}
+.brand-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:48px}
+.brand-tag{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(184,146,74,0.3);color:rgba(255,255,255,0.5)}
+
+/* SECTIONS */
+section{padding:100px 40px}
+.container{max-width:900px;margin:0 auto}
+.container-wide{max-width:1100px;margin:0 auto}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--dourado);margin-bottom:16px}
+h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.2;margin-bottom:28px}
+.section-intro{font-size:17px;font-weight:300;color:rgba(255,255,255,0.7);max-width:600px;line-height:1.8;margin-bottom:48px}
+
+/* REALITY */
+.reality{background:linear-gradient(180deg,#0a1f16 0%,#0d2519 100%)}
+.reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:60px}
+.reality-card{background:rgba(255,255,255,0.04);padding:40px;border-left:2px solid transparent;transition:all 0.3s}
+.reality-card:hover{background:rgba(184,146,74,0.06);border-left-color:var(--dourado)}
+.reality-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:12px;color:var(--branco)}
+.reality-card p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7}
+.reality-number{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--dourado);opacity:0.3;line-height:1;margin-bottom:16px}
+
+/* SCAN */
+.scan-section{background:#0a1f16}
+.scan-container{background:rgba(255,255,255,0.03);border:1px solid rgba(184,146,74,0.2);padding:60px;max-width:800px;margin:0 auto}
+.scan-question{display:none}
+.scan-question.active{display:block}
+.scan-q-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--dourado);margin-bottom:12px}
+.scan-q-text{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:32px;line-height:1.4}
+.scan-options{display:grid;gap:12px}
+.scan-opt{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:16px 20px;cursor:pointer;font-size:14px;color:rgba(255,255,255,0.8);transition:all 0.2s;text-align:left;font-family:'Montserrat',sans-serif}
+.scan-opt:hover,.scan-opt.selected{background:rgba(184,146,74,0.15);border-color:var(--dourado);color:var(--branco)}
+.scan-progress{display:flex;gap:6px;margin-bottom:40px}
+.scan-dot{width:8px;height:8px;background:rgba(255,255,255,0.15);transition:background 0.3s}
+.scan-dot.done{background:var(--dourado)}
+.scan-nav{display:flex;justify-content:space-between;margin-top:32px;align-items:center}
+.scan-counter{font-size:12px;color:rgba(255,255,255,0.4);font-weight:600}
+.scan-result{display:none;text-align:center}
+.scan-result.active{display:block}
+.scan-score-circle{width:160px;height:160px;border-radius:50%;border:3px solid var(--dourado);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 32px}
+.scan-score-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:var(--dourado);line-height:1}
+.scan-score-label{font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em}
+.scan-dimension-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0;text-align:left}
+.scan-dim{background:rgba(255,255,255,0.04);padding:16px;border-left:2px solid var(--dourado)}
+.scan-dim-name{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.5);margin-bottom:4px}
+.scan-dim-score{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--dourado)}
+.scan-email-form{margin-top:32px}
+.scan-email-form input{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);padding:14px 18px;color:var(--branco);font-family:'Montserrat',sans-serif;font-size:14px;margin-bottom:12px}
+.scan-email-form input::placeholder{color:rgba(255,255,255,0.3)}
+.scan-email-form input:focus{outline:none;border-color:var(--dourado)}
+
+/* OPPORTUNITIES */
+.opportunities{background:linear-gradient(180deg,#0d2519 0%,#0e2a1f 100%)}
+.opp-tabs{display:flex;gap:0;margin-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.opp-tab{padding:14px 24px;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;margin-bottom:-1px}
+.opp-tab.active{color:var(--dourado);border-bottom-color:var(--dourado)}
+.opp-panel{display:none}
+.opp-panel.active{display:block}
+.opp-features{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.opp-feature{background:rgba(255,255,255,0.03);padding:28px;border:1px solid rgba(255,255,255,0.06)}
+.opp-feature h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--dourado);margin-bottom:10px}
+.opp-feature p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6}
+
+/* FORMS */
+.forms-section{background:#0a1f16}
+.form-container{max-width:600px;margin:0 auto}
+.form-tabs{display:flex;gap:0;margin-bottom:40px}
+.form-tab{flex:1;padding:14px;text-align:center;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.4);transition:all 0.2s}
+.form-tab.active{background:rgba(184,146,74,0.15);border-color:var(--dourado);color:var(--dourado)}
+.form-panel{display:none}
+.form-panel.active{display:block}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);padding:13px 16px;color:var(--branco);font-family:'Montserrat',sans-serif;font-size:14px;transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--dourado)}
+.form-group select option{background:var(--verde)}
+.form-success{display:none;text-align:center;padding:32px;color:var(--dourado);font-size:16px}
+
+/* INTELLIGENCE */
+.intelligence{background:var(--verde)}
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.article-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:32px;transition:all 0.3s;cursor:pointer}
+.article-card:hover{background:rgba(184,146,74,0.08);border-color:rgba(184,146,74,0.3)}
+.article-tag{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--dourado);margin-bottom:12px}
+.article-card h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;line-height:1.3;margin-bottom:12px;color:var(--branco)}
+.article-card p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
+
+/* BOOK */
+.book-section{background:linear-gradient(160deg,#0a1f16 0%,#0d2519 100%)}
+.book-inner{display:grid;grid-template-columns:280px 1fr;gap:80px;align-items:center}
+.book-cover{position:relative;perspective:1000px}
+.book-3d{width:220px;height:300px;background:linear-gradient(135deg,var(--verde2) 0%,#0a1f16 100%);border:1px solid rgba(184,146,74,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;transform:rotateY(-10deg);box-shadow:-8px 12px 40px rgba(0,0,0,0.6),4px 0 0 rgba(184,146,74,0.3);transition:transform 0.4s}
+.book-3d:hover{transform:rotateY(0deg)}
+.book-title-cover{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--dourado);line-height:1.3;margin-bottom:12px}
+.book-author-cover{font-size:11px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em}
+.book-ornament{width:40px;height:1px;background:var(--dourado);margin:12px auto}
+
+/* ABOUT */
+.about{background:#0a1f16}
+.about-inner{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
+.about-photo{background:rgba(255,255,255,0.05);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;border:1px solid rgba(184,146,74,0.2)}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.photo-placeholder{text-align:center;color:rgba(255,255,255,0.2)}
+.brands-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.brand-pill{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(184,146,74,0.25);color:rgba(255,255,255,0.5)}
+
+/* FOOTER */
+footer{background:#060f0a;padding:40px;text-align:center;border-top:1px solid rgba(184,146,74,0.15)}
+footer p{font-size:12px;color:rgba(255,255,255,0.3)}
+footer a{color:var(--dourado);text-decoration:none}
+.social-links{display:flex;justify-content:center;gap:24px;margin-bottom:20px}
+.social-links a{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s}
+.social-links a:hover{color:var(--dourado)}
+
+/* MOBILE */
+@media(max-width:768px){
+nav{padding:16px 20px}
+.nav-links{gap:0}
+.nav-links a:not(.nav-cta){display:none}
+.nav-cta{padding:8px 14px!important;font-size:10px!important}
+.hero{padding:60px 20px;min-height:auto;padding-top:80px}
+.hero-stats{gap:24px}
+.stat-num{font-size:32px}
+section{padding:60px 20px}
+.reality-grid,.opp-features,.scan-dimension-grid,.article-grid{grid-template-columns:1fr}
+.book-inner,.about-inner{grid-template-columns:1fr}
+.book-3d{width:180px;height:240px;margin:0 auto}
+.scan-container{padding:32px 20px}
+.lang-bar{padding:8px 20px}
+}
+
+/* LANG LINKS */
+a.lang-btn{text-decoration:none}
+
+/* PROOF */
+.proof{background:#0a1f16;padding:72px 40px;border-top:1px solid rgba(184,146,74,0.15);border-bottom:1px solid rgba(184,146,74,0.15)}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:40px}
+.proof-item{background:rgba(255,255,255,0.03);padding:32px 24px;border-top:2px solid var(--dourado)}
+.proof-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--dourado);line-height:1}
+.proof-label{font-size:12px;font-weight:500;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.1em;margin-top:12px;line-height:1.5}
+.proof .brand-tags{margin-top:32px}
+.proof h2{margin-bottom:0}
+
+/* HERO CTA NOTE */
+.cta-note{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.08em;margin-top:16px}
+
+/* WHATSAPP */
+.btn-wa{display:inline-flex;align-items:center;gap:10px}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:200;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:14px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,0.35);transition:transform 0.2s}
+.wa-float:hover{transform:translateY(-2px)}
+.contact-wa{text-align:center;margin-bottom:40px;font-size:14px;color:rgba(255,255,255,0.7)}
+.contact-wa a{color:var(--dourado);font-weight:700;text-decoration:none}
+.scan-wa{display:inline-flex;align-items:center;gap:10px;margin-top:20px;color:#25D366;font-weight:700;font-size:13px;text-decoration:none}
+
+/* OPP: odd last card spans full row */
+.opp-feature:last-child:nth-child(odd){grid-column:1/-1}
+
+@media(max-width:768px){
+.proof{padding:48px 20px}
+.proof-grid{grid-template-columns:1fr 1fr}
+.proof-num{font-size:40px}
+.wa-float span{display:none}
+.wa-float{padding:14px}
+.btn-outline{margin-left:0;margin-top:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <a class="lang-btn" href="/" hreflang="pt-BR" lang="pt-BR">PT</a>
+  <a class="lang-btn" href="/en/" hreflang="en" lang="en">EN</a>
+  <a class="lang-btn active" href="/es/" hreflang="es" lang="es" aria-current="page">ES</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="/es/" class="nav-logo">Nilson Bernal</a>
+  <div class="nav-links">
+    <a href="#opportunities">Servicios</a>
+    <a href="#book">Libro</a>
+    <a href="#contact">Contacto</a>
+    <a href="#scan" class="nav-cta">Scan gratuito</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">
+      Hospitalidad de Alto Estándar
+    </p>
+    <h1>
+      Inteligencia que<br/><em>eleva</em> el hotel<br/>independiente.
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">
+      30 años operando hoteles de lujo en Brasil y EE.UU. Diagnóstico, transformación y crecimiento para hoteles independientes.
+    </p>
+    <a href="#scan" class="btn-primary">Hacer el Scan gratuito</a>
+    <a href="https://wa.me/19543264421?text=%C2%A1Hola%2C%20Nilson%21%20Llegu%C3%A9%20por%20nilsonbernal.com%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20hotel." target="_blank" rel="noopener" class="btn-outline btn-wa"><svg viewBox="0 0 32 32" aria-hidden="true" width="22" height="22"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.1.56 4.16 1.62 5.97L4 29l8.3-1.6a12.1 12.1 0 0 0 3.74.6C22.68 28 28 22.64 28 16.04 28 9.4 22.68 3 16.04 3Zm0 21.9c-1.2 0-2.38-.2-3.5-.6l-.5-.18-4.92.95.98-4.76-.2-.5a9.7 9.7 0 0 1-1.4-4.85c0-5.38 4.44-9.76 9.54-9.76 5.36 0 9.76 4.38 9.76 9.82 0 5.4-4.4 9.88-9.76 9.88Zm5.36-7.3c-.3-.15-1.74-.86-2-.96-.28-.1-.48-.15-.68.15-.2.3-.78.96-.96 1.16-.18.2-.36.22-.66.08-.3-.15-1.26-.47-2.4-1.48-.88-.8-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.62-.92-2.22-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.7.3 1.26.48 1.7.62.71.22 1.36.2 1.87.12.57-.08 1.74-.7 2-1.4.24-.68.24-1.27.17-1.4-.08-.12-.28-.2-.58-.34Z"/></svg>Hablar por WhatsApp</a>
+    <p class="cta-note">Gratis · 8 preguntas · resultado inmediato</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof" id="proof">
+  <div class="container-wide">
+    <p class="section-label">Trayectoria comprobada</p>
+    <h2>Experiencia medida en operación real.</h2>
+    <div class="proof-grid">
+      <div class="proof-item"><div class="proof-num">30+</div><div class="proof-label">Años en hotelería de alto estándar</div></div>
+      <div class="proof-item"><div class="proof-num">6</div><div class="proof-label">Marcas internacionales en su carrera</div></div>
+      <div class="proof-item"><div class="proof-num">2</div><div class="proof-label">Países: Brasil y Estados Unidos</div></div>
+      <div class="proof-item"><div class="proof-num">9</div><div class="proof-label">Libros publicados, con lanzamiento en el Louvre</div></div>
+    </div>
+    <div class="brand-tags">
+      <span class="brand-tag">Ritz-Carlton</span>
+      <span class="brand-tag">Four Seasons</span>
+      <span class="brand-tag">W Hotels</span>
+      <span class="brand-tag">Sheraton</span>
+      <span class="brand-tag">Radisson</span>
+      <span class="brand-tag">Four Points</span>
+    </div>
+  </div>
+</section>
+
+<!-- REALITY -->
+<section class="reality">
+  <div class="container-wide">
+    <p class="section-label">La realidad del mercado</p>
+    <h2>El hotel independiente enfrenta batallas que las cadenas no necesitan librar.</h2>
+    <div class="reality-grid">
+      <div class="reality-card">
+        <div class="reality-number">01</div>
+        <h3>Dependencia de OTA</h3>
+        <p>Comisiones del 15–25% erosionando el margen. Sin estrategia de canal directo, el hotel trabaja para la plataforma, no para el dueño.</p>
+      </div>
+      <div class="reality-card">
+        <div class="reality-number">02</div>
+        <h3>Deterioro del activo</h3>
+        <p>Mantenimiento aplazado, capital mal asignado, patrimonio depreciándose en silencio. El costo invisible de una gestión reactiva.</p>
+      </div>
+      <div class="reality-card">
+        <div class="reality-number">03</div>
+        <h3>Talento sin equidad</h3>
+        <p>Alta rotación, ausencia de cultura y líderes sin participación en el resultado. Operación que nunca alcanza su potencial.</p>
+      </div>
+      <div class="reality-card">
+        <div class="reality-number">04</div>
+        <h3>Decisiones sin datos</h3>
+        <p>RevPAR, ADR, GOP — métricas que deberían guiar cada decisión permanecen invisibles para el dueño. El informe mensual oculta más de lo que revela.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL INTELLIGENCE SCAN -->
+<section class="scan-section" id="scan">
+  <div class="container">
+    <p class="section-label">Hotel Intelligence Scan™ · Gratis</p>
+    <h2>Diagnóstico en 8 preguntas.</h2>
+    <p class="section-intro">Descubre el score de inteligencia de tu hotel en 6 dimensiones críticas. Gratis. Resultado inmediato.</p>
+    <div class="scan-container">
+      <div class="scan-progress" id="scanProgress"></div>
+      <div id="scanQuestions"></div>
+      <div class="scan-result" id="scanResult">
+        <div class="scan-score-circle">
+          <div class="scan-score-num" id="scanScoreNum">0</div>
+          <div class="scan-score-label">Score</div>
+        </div>
+        <h3 id="scanResultTitle" style="font-family:'Playfair Display',serif;font-size:28px;margin-bottom:16px"></h3>
+        <p id="scanResultDesc" style="color:rgba(255,255,255,0.6);margin-bottom:32px"></p>
+        <div class="scan-dimension-grid" id="scanDimGrid"></div>
+        <form class="scan-email-form" name="scan-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="sendScanReport(event)">
+          <input type="hidden" name="form-name" value="scan-leads"/>
+          <input type="hidden" name="overall-score" id="scanFieldScore"/>
+          <input type="hidden" name="diagnosis" id="scanFieldDiagnosis"/>
+          <input type="hidden" name="weakest-dimension" id="scanFieldWeakest"/>
+          <p hidden><label>Bot <input name="bot-field"/></label></p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:16px">Recibe el informe completo por correo:</p>
+          <input type="text" name="name" placeholder="Tu nombre" autocomplete="name"/>
+          <input type="email" name="email" id="scanEmail" placeholder="tu@email.com" autocomplete="email" required/>
+          <button type="submit" class="btn-primary" style="width:100%">Enviar informe</button>
+        </form>
+        <a class="scan-wa" id="scanWa" href="https://wa.me/19543264421?text=%C2%A1Hola%2C%20Nilson%21%20Llegu%C3%A9%20por%20nilsonbernal.com%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20hotel." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true" width="22" height="22"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.1.56 4.16 1.62 5.97L4 29l8.3-1.6a12.1 12.1 0 0 0 3.74.6C22.68 28 28 22.64 28 16.04 28 9.4 22.68 3 16.04 3Zm0 21.9c-1.2 0-2.38-.2-3.5-.6l-.5-.18-4.92.95.98-4.76-.2-.5a9.7 9.7 0 0 1-1.4-4.85c0-5.38 4.44-9.76 9.54-9.76 5.36 0 9.76 4.38 9.76 9.82 0 5.4-4.4 9.88-9.76 9.88Zm5.36-7.3c-.3-.15-1.74-.86-2-.96-.28-.1-.48-.15-.68.15-.2.3-.78.96-.96 1.16-.18.2-.36.22-.66.08-.3-.15-1.26-.47-2.4-1.48-.88-.8-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.62-.92-2.22-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.7.3 1.26.48 1.7.62.71.22 1.36.2 1.87.12.57-.08 1.74-.7 2-1.4.24-.68.24-1.27.17-1.4-.08-.12-.28-.2-.58-.34Z"/></svg>Conversar mi resultado por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="opportunities" id="opportunities">
+  <div class="container-wide">
+    <p class="section-label">Cómo trabajo</p>
+    <h2>Para cada perfil, un enfoque preciso.</h2>
+    <div class="opp-tabs">
+      <div class="opp-tab active" onclick="switchTab('owners')">Dueños de Hotel</div>
+      <div class="opp-tab" onclick="switchTab('investors')">Inversores</div>
+      <div class="opp-tab" onclick="switchTab('gm')">Gerentes Generales</div>
+    </div>
+    <div class="opp-panel active" id="panel-owners">
+      <p style="font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:32px">Invertiste en el hotel. Ahora necesitas saber si se está gestionando con la misma seriedad con la que invertiste.</p>
+      <div class="opp-features">
+        <div class="opp-feature"><h4>Auditoría Operacional</h4><p>Diagnóstico completo de operaciones, finanzas y activo físico. Informe con brechas y plan de acción.</p></div>
+        <div class="opp-feature"><h4>Gestión de Performance</h4><p>Implementación de KPIs, dashboard de gestión y rituales de seguimiento mensual con el dueño.</p></div>
+        <div class="opp-feature"><h4>Turnaround Operacional</h4><p>Para hoteles en declive. Diagnóstico, plan de recuperación y seguimiento de ejecución.</p></div>
+      </div>
+    </div>
+    <div class="opp-panel" id="panel-investors">
+      <p style="font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:32px">Capital que necesita inteligencia operacional antes de ser asignado, o rescatado de un activo mal gestionado.</p>
+      <div class="opp-features">
+        <div class="opp-feature"><h4>Due Diligence Hotelera</h4><p>Antes de comprar, arrendar o invertir: evaluación operacional independiente del activo.</p></div>
+        <div class="opp-feature"><h4>Asset Management</h4><p>Representación del inversor en la operación. Garantía de que los KPIs del activo se cumplan.</p></div>
+      </div>
+    </div>
+    <div class="opp-panel" id="panel-gm">
+      <p style="font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:32px">Gestionas el hotel de otra persona. Ha llegado el momento de gestionar tus propios resultados.</p>
+      <div class="opp-features">
+        <div class="opp-feature"><h4>Programa GP ELEVHOTELS</h4><p>Conviértete en Gerente General Socio. Remuneración variable basada en resultados reales del hotel.</p></div>
+        <div class="opp-feature"><h4>Mentoría Ejecutiva</h4><p>Para gerentes que quieren acelerar su trayectoria. Sesiones individuales con enfoque en resultados y posicionamiento.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book-section" id="book">
+  <div class="container">
+    <div class="book-inner">
+      <div class="book-cover">
+        <div class="book-3d">
+          <div class="book-ornament"></div>
+          <div class="book-title-cover">Para uma Trajetória de Sucesso na Hotelaria</div>
+          <div class="book-ornament"></div>
+          <div class="book-author-cover">Nilson Bernal</div>
+        </div>
+      </div>
+      <div>
+        <p class="section-label">Libro</p>
+        <h2>Para una Trayectoria de Éxito en la Hotelería</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:24px">Tasca Editorial, 2017. El libro que condensa tres décadas de aprendizaje en hotelería de alto estándar. Disponible en Amazon.</p>
+        <a href="https://www.amazon.com/Journey-Success-Hospitality-Inspiring-Leadership-ebook/dp/B0DKG7Z3ZV/" target="_blank" class="btn-primary">Ver en Amazon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTELLIGENCE CENTER -->
+<section class="intelligence" id="intelligence">
+  <div class="container-wide">
+    <p class="section-label">Inteligencia Hotelera</p>
+    <h2>Perspectivas que el mercado aún no ha visto.</h2>
+    <div class="article-grid">
+      <div class="article-card" onclick="window.open('https://www.linkedin.com/in/nilson-bernal','_blank')">
+        <div class="article-tag">Revenue</div>
+        <h3>Por qué el RevPAR de tu hotel está por debajo del mercado</h3>
+        <p>Tres causas que ninguna consultoría tradicional te dirá.</p>
+      </div>
+      <div class="article-card" onclick="window.open('https://www.linkedin.com/in/nilson-bernal','_blank')">
+        <div class="article-tag">Gestión</div>
+        <h3>El error que los dueños de hotel cometen cada lunes</h3>
+        <p>Cómo la ausencia de 7 preguntas simples sale caro.</p>
+      </div>
+      <div class="article-card" onclick="window.open('https://www.linkedin.com/in/nilson-bernal','_blank')">
+        <div class="article-tag">Liderazgo</div>
+        <h3>Lo que separa a un gerente general de un líder de hotel</h3>
+        <p>Después de 30 años operando ambos, la diferencia es clara.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORMS -->
+<section class="forms-section" id="contact">
+  <div class="container">
+    <p class="section-label">Contacto</p>
+    <h2>Hablemos.</h2>
+    <p class="contact-wa">¿Prefieres conversar ahora? <a href="https://wa.me/19543264421?text=%C2%A1Hola%2C%20Nilson%21%20Llegu%C3%A9%20por%20nilsonbernal.com%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20hotel." target="_blank" rel="noopener">WhatsApp +1 954 326 4421</a></p>
+    <div class="form-container">
+      <div class="form-tabs">
+        <div class="form-tab active" onclick="switchForm('owner')">Dueño</div>
+        <div class="form-tab" onclick="switchForm('investor')">Inversor</div>
+        <div class="form-tab" onclick="switchForm('gm')">Gerente</div>
+      </div>
+
+      <div class="form-panel active" id="form-owner">
+        <form method="POST" name="hotel-owner" data-netlify="true" onsubmit="handleFormSubmit(event,'form-owner')">
+          <input type="hidden" name="form-name" value="hotel-owner"/>
+          <div class="form-group"><label>Nombre</label><input type="text" name="name" required/></div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+          <div class="form-group"><label>Hotel</label><input type="text" name="hotel"/></div>
+          <div class="form-group"><label>Ciudad / Estado</label><input type="text" name="city"/></div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:8px">Enviar</button>
+        </form>
+        <div class="form-success" id="success-owner">✓ Mensaje recibido. Me pondré en contacto pronto.</div>
+      </div>
+
+      <div class="form-panel" id="form-investor">
+        <form method="POST" name="investor" data-netlify="true" onsubmit="handleFormSubmit(event,'form-investor')">
+          <input type="hidden" name="form-name" value="investor"/>
+          <div class="form-group"><label>Nombre</label><input type="text" name="name" required/></div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+          <div class="form-group"><label>Tipo de interés</label>
+            <select name="interest">
+              <option value="acquisition">Adquisición de hotel</option>
+              <option value="due-diligence">Due Diligence</option>
+              <option value="asset">Asset Management</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:8px">Enviar</button>
+        </form>
+        <div class="form-success" id="success-investor">✓ Mensaje recibido.</div>
+      </div>
+
+      <div class="form-panel" id="form-gm">
+        <form method="POST" name="general-manager" data-netlify="true" onsubmit="handleFormSubmit(event,'form-gm')">
+          <input type="hidden" name="form-name" value="general-manager"/>
+          <div class="form-group"><label>Nombre</label><input type="text" name="name" required/></div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" required/></div>
+          <div class="form-group"><label>Ciudad de operación</label><input type="text" name="city"/></div>
+          <div class="form-group"><label>Años de experiencia</label><input type="text" name="experience"/></div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:8px">Quiero ser GP</button>
+        </form>
+        <div class="form-success" id="success-gm">✓ Solicitud recibida.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photo"><img src="/img/nilson-bernal.jpg" alt="Nilson Bernal" style="width:100%;height:100%;object-fit:cover;display:block"/></div>
+      <div>
+        <p class="section-label">Sobre</p>
+        <h2>30 años dentro de la operación.</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:20px">Más de 30 años de carrera en hotelería de alto estándar, con paso por marcas como Ritz-Carlton, Four Seasons, W Hotels, Sheraton, Radisson y Four Points, en Brasil y Estados Unidos. No soy consultor. Soy un operador.</p>
+        <p style="color:rgba(255,255,255,0.7);margin-bottom:20px">Coautor de ocho libros de hotelería, incluyendo un lanzamiento en el Louvre en París. Autor de "Para una Trayectoria de Éxito en la Hotelería" (Tasca Editorial, 2017).</p>
+        <div class="brands-grid">
+          <span class="brand-pill">Ritz-Carlton</span>
+          <span class="brand-pill">Four Seasons</span>
+          <span class="brand-pill">W Hotels</span>
+          <span class="brand-pill">Sheraton</span>
+          <span class="brand-pill">Radisson</span>
+          <span class="brand-pill">Four Points</span>
+          <span class="brand-pill">ELEVHOTELS</span>
+          <span class="brand-pill">BTM Global</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/nilson-bernal" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/nilsonbernal.global" target="_blank">Instagram</a>
+    <a href="https://wa.me/19543264421?text=%C2%A1Hola%2C%20Nilson%21%20Llegu%C3%A9%20por%20nilsonbernal.com%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20hotel." target="_blank" rel="noopener">WhatsApp</a>
+    <a href="mailto:nilson.bernal@elevhotels.com">Email</a>
+  </div>
+  <p>© 2026 Nilson Bernal &nbsp;·&nbsp; <a href="https://nilsonbernal.com">nilsonbernal.com</a></p>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="wa-float" href="https://wa.me/19543264421?text=%C2%A1Hola%2C%20Nilson%21%20Llegu%C3%A9%20por%20nilsonbernal.com%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20mi%20hotel." target="_blank" rel="noopener" aria-label="Conversar con Nilson Bernal por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" width="22" height="22"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.1.56 4.16 1.62 5.97L4 29l8.3-1.6a12.1 12.1 0 0 0 3.74.6C22.68 28 28 22.64 28 16.04 28 9.4 22.68 3 16.04 3Zm0 21.9c-1.2 0-2.38-.2-3.5-.6l-.5-.18-4.92.95.98-4.76-.2-.5a9.7 9.7 0 0 1-1.4-4.85c0-5.38 4.44-9.76 9.54-9.76 5.36 0 9.76 4.38 9.76 9.82 0 5.4-4.4 9.88-9.76 9.88Zm5.36-7.3c-.3-.15-1.74-.86-2-.96-.28-.1-.48-.15-.68.15-.2.3-.78.96-.96 1.16-.18.2-.36.22-.66.08-.3-.15-1.26-.47-2.4-1.48-.88-.8-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.62-.92-2.22-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.7.3 1.26.48 1.7.62.71.22 1.36.2 1.87.12.57-.08 1.74-.7 2-1.4.24-.68.24-1.27.17-1.4-.08-.12-.28-.2-.58-.34Z"/></svg><span>WhatsApp</span></a>
+
+<script>
+const LANG='es';
+
+// TABS
+function switchTab(tab){
+  document.querySelectorAll('.opp-tab').forEach((t,i)=>{
+    const ids=['owners','investors','gm'];
+    t.classList.toggle('active', ids[i]===tab);
+  });
+  document.querySelectorAll('.opp-panel').forEach(p=>{
+    p.classList.toggle('active', p.id==='panel-'+tab);
+  });
+}
+function switchForm(f){
+  document.querySelectorAll('.form-tab').forEach((t,i)=>{
+    const ids=['owner','investor','gm'];
+    t.classList.toggle('active', ids[i]===f);
+  });
+  document.querySelectorAll('.form-panel').forEach(p=>{
+    p.classList.toggle('active', p.id==='form-'+f);
+  });
+}
+
+// FORMS
+function handleFormSubmit(e, formId){
+  e.preventDefault();
+  const form=e.target;
+  fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(form)).toString()})
+  .then(()=>{
+    form.style.display='none';
+    document.getElementById('success-'+formId.replace('form-','')).style.display='block';
+  }).catch(()=>{form.submit();});
+}
+
+// SCAN
+const scanData = {
+  pt: [
+    {q:"Como você avalia a performance comercial atual do seu hotel?", dim:"Comercial", opts:["Crescimento consistente acima do mercado","Estável, mas abaixo do potencial","Em queda nos últimos 6 meses","Não tenho clareza sobre os números"]},
+    {q:"Qual é a principal fonte de reservas do seu hotel?", dim:"Revenue", opts:["Canal direto (site, telefone) acima de 40%","OTAs entre 40–60% do total","OTAs acima de 60% — alta dependência","Não sei a proporção exata"]},
+    {q:"Como está a condição física do seu hotel hoje?", dim:"Ativo", opts:["Ativo preservado, manutenção preventiva em dia","Alguns reparos pendentes, sem urgência","Deterioração visível, manutenção atrasada","Problemas estruturais não resolvidos"]},
+    {q:"Como você avalia a liderança operacional atual?", dim:"Liderança", opts:["Gestor engajado, resultados consistentes","Gestor competente mas sem visão estratégica","Alta rotatividade recente de liderança","Ausência de liderança clara na operação"]},
+    {q:"Qual é o nível de governança financeira do seu hotel?", dim:"Governança", opts:["DRE mensal, fluxo de caixa e KPIs acompanhados","Relatórios mensais básicos disponíveis","Informações financeiras fragmentadas","Gestão financeira informal sem relatórios"]},
+    {q:"Como está a satisfação dos hóspedes?", dim:"Operacional", opts:["Nota média acima de 8,5 nas plataformas","Entre 7,5 e 8,5, estável","Entre 6,5 e 7,5, com reclamações recorrentes","Abaixo de 6,5 ou sem monitoramento"]},
+    {q:"Qual é a sua relação com o gestor ou operadora atual?", dim:"Governança", opts:["Comunicação regular, acesso pleno a dados","Comunicação mensal, dados disponíveis quando solicitado","Dificuldade de acesso a informações","Conflito ou desalinhamento frequente"]},
+    {q:"Qual é o seu objetivo principal com o hotel nos próximos 2 anos?", dim:"Comercial", opts:["Maximizar resultado operacional e fluxo de caixa","Valorizar o ativo para venda ou refinanciamento","Profissionalizar a gestão e reduzir dependência","Resolver problemas urgentes antes de qualquer outra coisa"]}
+  ],
+  en: [
+    {q:"How do you rate your hotel's current commercial performance?", dim:"Commercial", opts:["Consistent growth above market","Stable, but below potential","Declining over the last 6 months","I don't have clarity on the numbers"]},
+    {q:"What is the main booking source for your hotel?", dim:"Revenue", opts:["Direct channel (website, phone) above 40%","OTAs between 40–60% of total","OTAs above 60% — high dependency","I don't know the exact proportion"]},
+    {q:"How is the physical condition of your hotel today?", dim:"Asset", opts:["Asset preserved, preventive maintenance up to date","Some pending repairs, no urgency","Visible deterioration, delayed maintenance","Unresolved structural issues"]},
+    {q:"How do you evaluate current operational leadership?", dim:"Leadership", opts:["Engaged manager, consistent results","Competent manager but no strategic vision","Recent high leadership turnover","No clear leadership in the operation"]},
+    {q:"What is the level of financial governance in your hotel?", dim:"Governance", opts:["Monthly P&L, cash flow and KPIs tracked","Basic monthly reports available","Fragmented financial information","Informal financial management without reports"]},
+    {q:"How is guest satisfaction?", dim:"Operational", opts:["Average score above 8.5 on platforms","Between 7.5 and 8.5, stable","Between 6.5 and 7.5, with recurring complaints","Below 6.5 or no monitoring"]},
+    {q:"How is your relationship with your current manager or operator?", dim:"Governance", opts:["Regular communication, full access to data","Monthly communication, data available on request","Difficulty accessing information","Frequent conflict or misalignment"]},
+    {q:"What is your main goal for the hotel in the next 2 years?", dim:"Commercial", opts:["Maximize operational result and cash flow","Appreciate the asset for sale or refinancing","Professionalize management and reduce dependency","Solve urgent problems before anything else"]}
+  ],
+  es: [
+    {q:"¿Cómo evalúas el rendimiento comercial actual de tu hotel?", dim:"Comercial", opts:["Crecimiento consistente por encima del mercado","Estable, pero por debajo del potencial","En declive en los últimos 6 meses","No tengo claridad sobre los números"]},
+    {q:"¿Cuál es la principal fuente de reservas de tu hotel?", dim:"Revenue", opts:["Canal directo (web, teléfono) por encima del 40%","OTAs entre 40–60% del total","OTAs por encima del 60% — alta dependencia","No sé la proporción exacta"]},
+    {q:"¿Cómo está la condición física de tu hotel hoy?", dim:"Activo", opts:["Activo preservado, mantenimiento preventivo al día","Algunas reparaciones pendientes, sin urgencia","Deterioro visible, mantenimiento atrasado","Problemas estructurales sin resolver"]},
+    {q:"¿Cómo evalúas el liderazgo operacional actual?", dim:"Liderazgo", opts:["Gestor comprometido, resultados consistentes","Gestor competente pero sin visión estratégica","Alta rotación reciente de liderazgo","Ausencia de liderazgo claro en la operación"]},
+    {q:"¿Cuál es el nivel de gobernanza financiera de tu hotel?", dim:"Gobernanza", opts:["P&L mensual, flujo de caja y KPIs seguidos","Informes mensuales básicos disponibles","Información financiera fragmentada","Gestión financiera informal sin informes"]},
+    {q:"¿Cómo está la satisfacción de los huéspedes?", dim:"Operacional", opts:["Puntuación media superior a 8,5 en plataformas","Entre 7,5 y 8,5, estable","Entre 6,5 y 7,5, con quejas recurrentes","Por debajo de 6,5 o sin seguimiento"]},
+    {q:"¿Cómo es tu relación con el gestor u operadora actual?", dim:"Gobernanza", opts:["Comunicación regular, acceso pleno a datos","Comunicación mensual, datos disponibles a pedido","Dificultad para acceder a información","Conflicto o desalineación frecuente"]},
+    {q:"¿Cuál es tu objetivo principal con el hotel en los próximos 2 años?", dim:"Comercial", opts:["Maximizar resultado operacional y flujo de caja","Valorizar el activo para venta o refinanciamiento","Profesionalizar la gestión y reducir dependencia","Resolver problemas urgentes antes que cualquier otra cosa"]}
+  ]
+};
+
+let scanAnswers=[];
+
+function getCurrentScanData(){
+  return scanData[LANG];
+}
+
+function initScan(){
+  const data=getCurrentScanData();
+  const prog=document.getElementById('scanProgress');
+  prog.innerHTML=data.map((_,i)=>`<div class="scan-dot" id="dot${i}"></div>`).join('');
+  const qs=document.getElementById('scanQuestions');
+  qs.innerHTML=data.map((q,i)=>`
+    <div class="scan-question${i===0?' active':''}" id="sq${i}">
+      <div class="scan-q-label">${i+1} / ${data.length} — ${q.dim}</div>
+      <div class="scan-q-text">${q.q}</div>
+      <div class="scan-options">
+        ${q.opts.map((o,j)=>`<button class="scan-opt" onclick="selectOpt(${i},${j},this)">${o}</button>`).join('')}
+      </div>
+      <div class="scan-nav">
+        ${i>0?`<button class="btn-outline" style="margin:0" onclick="goTo(${i-1})">←</button>`:'<span></span>'}
+        <span class="scan-counter">${i+1} de ${data.length}</span>
+        ${i<data.length-1?`<button class="btn-primary" id="next${i}" style="opacity:0.3;pointer-events:none" onclick="goTo(${i+1})">→</button>`:`<button class="btn-primary" id="next${i}" style="opacity:0.3;pointer-events:none" onclick="showScanResult()">Ver resultado</button>`}
+      </div>
+    </div>
+  `).join('');
+  scanAnswers=new Array(data.length).fill(null);
+}
+
+function selectOpt(qi,oi,btn){
+  scanAnswers[qi]=oi;
+  document.querySelectorAll(`#sq${qi} .scan-opt`).forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+  document.getElementById(`next${qi}`).style.opacity='1';
+  document.getElementById(`next${qi}`).style.pointerEvents='auto';
+  document.getElementById(`dot${qi}`).classList.add('done');
+}
+
+function goTo(i){
+  document.querySelectorAll('.scan-question').forEach(q=>q.classList.remove('active'));
+  document.getElementById(`sq${i}`).classList.add('active');
+}
+
+function showScanResult(){
+  const score=Math.round(scanAnswers.reduce((a,v)=>a+(v!=null?[100,70,40,10][v]:0),0)/scanAnswers.length);
+  document.getElementById('scanScoreNum').textContent=score;
+  const l=LANG;
+  const titles={pt:['Crítico','Atenção','Moderado','Bom','Excelente'],en:['Critical','Attention','Moderate','Good','Excellent'],es:['Crítico','Atención','Moderado','Bueno','Excelente']};
+  const descs={pt:['Ação imediata necessária.','Riscos visíveis que precisam ser endereçados.','Operação funcional com pontos de melhoria claros.','Hotel bem posicionado com oportunidades de otimização.','Operação de alto desempenho.'],en:['Immediate action needed.','Visible risks that need to be addressed.','Functional operation with clear improvement points.','Well-positioned hotel with optimization opportunities.','High-performance operation.'],es:['Acción inmediata necesaria.','Riesgos visibles que deben abordarse.','Operación funcional con puntos de mejora claros.','Hotel bien posicionado con oportunidades de optimización.','Operación de alto rendimiento.']};
+  const idx=score<30?0:score<50?1:score<70?2:score<85?3:4;
+  const tl=titles[l]||titles.pt;
+  const dl=descs[l]||descs.pt;
+  document.getElementById('scanResultTitle').textContent=tl[idx];
+  document.getElementById('scanResultDesc').textContent=dl[idx];
+  const data=getCurrentScanData();
+  const dims={};
+  data.forEach((q,i)=>{dims[q.dim]=dims[q.dim]||[];dims[q.dim].push(scanAnswers[i]!=null?[100,70,40,10][scanAnswers[i]]:50);});
+  const grid=document.getElementById('scanDimGrid');
+  const dimAvg=Object.entries(dims).map(([d,sc])=>[d,Math.round(sc.reduce((a,v)=>a+v,0)/sc.length)]);
+  const weakest=dimAvg.reduce((a,b)=>b[1]<a[1]?b:a);
+  document.getElementById('scanFieldScore').value=score;
+  document.getElementById('scanFieldDiagnosis').value=tl[idx];
+  document.getElementById('scanFieldWeakest').value=weakest[0]+' ('+weakest[1]+')';
+  document.getElementById('scanWa').href='https://wa.me/19543264421?text='+encodeURIComponent(WA_SCAN_MSG.replace('{score}',score).replace('{title}',tl[idx]));
+  grid.innerHTML=Object.entries(dims).map(([d,scores])=>`<div class="scan-dim"><div class="scan-dim-name">${d}</div><div class="scan-dim-score">${Math.round(scores.reduce((a,v)=>a+v,0)/scores.length)}</div></div>`).join('');
+  document.querySelectorAll('.scan-question').forEach(q=>q.classList.remove('active'));
+  document.getElementById('scanResult').classList.add('active');
+}
+
+const WA_SCAN_MSG='¡Hola, Nilson! Hice el Hotel Intelligence Scan y mi score fue {score} ({title}). Me gustaría conversar sobre el resultado.';
+function sendScanReport(e){
+  e.preventDefault();
+  const form=e.target;
+  fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(form)).toString()})
+  .then(r=>{
+    if(!r.ok) throw new Error(r.status);
+    form.innerHTML='<p style="color:var(--dourado);text-align:center">✓ ¡Recibido! Recibirás el informe completo en breve.</p>';
+  }).catch(()=>{
+    form.insertAdjacentHTML('beforeend','<p style="color:rgba(255,255,255,0.6);text-align:center;margin-top:12px">No fue posible enviar ahora. Escríbeme por WhatsApp.</p>');
+  });
+}
+
+// Init
+document.addEventListener('DOMContentLoaded',()=>{
+  initScan();
+});
+</script>
+</body>
+</html>
